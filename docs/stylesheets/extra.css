@@ -1,0 +1,199 @@
+/* ---------- Brand palette ---------- */
+
+:root {
+  --fr-violet: #5b3df5;
+  --fr-violet-light: #7c5cff;
+  --fr-violet-dark: #4527d9;
+  --fr-gold: #f59e0b;
+  --fr-gold-light: #ffd166;
+  --fr-gradient: linear-gradient(135deg, #7c5cff 0%, #5b3df5 45%, #f59e0b 100%);
+}
+
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color: var(--fr-violet);
+  --md-primary-fg-color--light: var(--fr-violet-light);
+  --md-primary-fg-color--dark: var(--fr-violet-dark);
+  --md-primary-bg-color: #fff;
+  --md-primary-bg-color--light: #ffffffb3;
+}
+
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: var(--fr-gold);
+  --md-accent-fg-color--transparent: #f59e0b1a;
+  --md-accent-bg-color: #fff;
+}
+
+[data-md-color-scheme="slate"][data-md-color-primary="custom"] {
+  --md-hue: 252;
+  --md-primary-fg-color: var(--fr-violet-light);
+  --md-typeset-a-color: #a993ff;
+}
+
+[data-md-color-scheme="default"] {
+  --md-typeset-a-color: var(--fr-violet);
+}
+
+/* ---------- Hero (home page) ---------- */
+
+.fr-hero {
+  position: relative;
+  margin: 1rem 0 2.5rem;
+  padding: 3.5rem 2rem 3rem;
+  border-radius: 1.25rem;
+  text-align: center;
+  overflow: hidden;
+  background:
+    radial-gradient(60% 80% at 15% 0%, #7c5cff33 0%, transparent 70%),
+    radial-gradient(50% 70% at 90% 100%, #f59e0b2e 0%, transparent 70%),
+    var(--md-code-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.fr-hero__stars {
+  font-size: 1.6rem;
+  letter-spacing: 0.35rem;
+  color: var(--fr-gold);
+  text-shadow: 0 0 1.2rem #f59e0b66;
+  animation: fr-twinkle 3s ease-in-out infinite;
+}
+
+@keyframes fr-twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fr-hero__stars { animation: none; }
+}
+
+.md-typeset .fr-hero h1 {
+  margin: 0.6rem 0 0.4rem;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: transparent;
+  background: var(--fr-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.fr-hero__tagline {
+  max-width: 32rem;
+  margin: 0 auto 1.8rem;
+  font-size: 1.05rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .fr-hero .md-button {
+  margin: 0.3rem;
+  border-radius: 999px;
+  padding: 0.6em 1.6em;
+  transition: transform 125ms, box-shadow 125ms;
+}
+
+.md-typeset .fr-hero .md-button:hover {
+  transform: translateY(-2px);
+}
+
+.md-typeset .fr-hero .md-button--primary {
+  background: linear-gradient(135deg, var(--fr-violet-light), var(--fr-violet-dark));
+  border: none;
+  box-shadow: 0 0.4rem 1.2rem #5b3df540;
+}
+
+.md-typeset .fr-hero .md-button--primary:hover {
+  box-shadow: 0 0.6rem 1.6rem #5b3df560;
+}
+
+.fr-hero__install {
+  display: inline-block;
+  margin-top: 1.4rem;
+}
+
+.md-typeset .fr-hero__install code {
+  padding: 0.4em 0.9em;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 44.9375em) {
+  .fr-hero { padding: 2.5rem 1rem 2rem; }
+  .md-typeset .fr-hero h1 { font-size: 2.2rem; }
+}
+
+/* ---------- Feature cards ---------- */
+
+.md-typeset .grid.cards > ul > li {
+  border-radius: 0.9rem;
+  padding: 1.1rem 1.2rem;
+  transition: border-color 150ms, box-shadow 150ms, transform 150ms;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--fr-violet-light);
+  box-shadow: 0 0.5rem 1.5rem #5b3df51f;
+  transform: translateY(-2px);
+}
+
+.md-typeset .grid.cards .lg {
+  color: var(--fr-violet);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards .lg {
+  color: var(--fr-violet-light);
+}
+
+/* ---------- Typography & details ---------- */
+
+.md-typeset h1,
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset table:not([class]) {
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--md-accent-fg-color--transparent);
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 0.6rem;
+}
+
+.md-typeset pre > code {
+  border-radius: 0.6rem;
+}
+
+/* ---------- Home page fixes ---------- */
+
+.md-typeset .fr-hero h1 .headerlink {
+  display: none;
+}
+
+.md-content:has(.fr-hero) .md-content__button {
+  display: none;
+}
+
+.md-typeset .fr-hero__install code {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background: var(--md-default-bg-color);
+}
+
+@media screen and (min-width: 45em) {
+  .md-typeset .grid.fr-two-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Active nav link: violet text on the gold tint reads better than gold on gold */
+
+[data-md-color-scheme="default"] .md-nav__link--active,
+[data-md-color-scheme="default"] .md-nav__item .md-nav__link--active {
+  color: var(--fr-violet-dark);
+}
