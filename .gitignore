@@ -1,0 +1,71 @@
+.mcp.json
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+.dart_tool/
+pubspec.lock
+.DS_Store
+/site
+# ---------- PyCharm / JetBrains ----------
+# Ignore the whole project settings folder (safest for a public package).
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Packaging / build output
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+pip-wheel-metadata/
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Testing / coverage / type checking
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.mypy_cache/
+.ruff_cache/
+.pyre/
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+.pypirc
+
+# ---------- Flet / Flutter (for extensions) ----------
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+pubspec.lock
+storage/
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini

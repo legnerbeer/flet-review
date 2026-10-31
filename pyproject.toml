@@ -1,0 +1,39 @@
+[project]
+name = "flet-review"
+version = "0.1.1"
+description = "In-app review prompt for Flet apps — wraps the Google Play / App Store review dialog"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Andreas Legner", email = "hi@legner.beer" }
+]
+keywords = ["flet", "flutter", "in-app-review", "rating", "android", "ios"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: Android",
+    "Operating System :: iOS",
+]
+dependencies = [
+    "flet>=1.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "zensical",
+    "mkdocstrings-python",
+]
+
+[project.urls]
+Homepage = "https://github.com/legnerbeer/flet-review"
+Documentation = "https://legnerbeer.github.io/flet-review/"
+Repository = "https://github.com/legnerbeer/flet-review"
+Issues = "https://github.com/legnerbeer/flet-review/issues"
+
+[tool.setuptools.package-data]
+"flutter.flet_review" = ["**/*"]
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"

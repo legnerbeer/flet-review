@@ -1,0 +1,20 @@
+name: flet_review
+description: Flet extension wrapping the in_app_review plugin (Google Play / App Store review prompt).
+version: 0.1.1
+publish_to: none
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flet: ^1.0.0
+  flutter:
+    sdk: flutter
+
+  in_app_review: ^2.0.9
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
